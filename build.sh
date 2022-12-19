@@ -15,10 +15,11 @@ done
 
 rm -rf $build_dir
 mkdir -p $build_dir
+git submodule update --init --recursive
 
-for f in pluginrc.zsh
+for f in pluginrc.zsh zsh
 do
-    cp $CDIR/$f $build_dir/
+    cp -r $CDIR/$f $build_dir/
 done
 
 #portable_url='https://,,,/.tar.gz'
