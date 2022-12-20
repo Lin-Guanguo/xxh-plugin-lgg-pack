@@ -17,7 +17,7 @@ rm -rf $build_dir
 mkdir -p $build_dir
 git submodule update --init --recursive
 
-for f in pluginrc.zsh zsh
+for f in pluginrc.zsh zsh fzf
 do
     cp -r $CDIR/$f $build_dir/
 done
