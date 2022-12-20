@@ -49,4 +49,6 @@ alias docker='sudo docker'
 export TERM=xterm-256color
 export EDITOR=vim
 
+# load local zsh
+[[-f ~/.zshrc]] && ~/.zshrc
 
