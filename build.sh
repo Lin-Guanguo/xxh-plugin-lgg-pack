@@ -15,12 +15,16 @@ done
 
 rm -rf $build_dir
 mkdir -p $build_dir
+mkdir -p $build_dir/bin
 git submodule update --init --recursive
 
-for f in pluginrc.zsh zsh fzf
+for f in pluginrc.zsh zsh
 do
     cp -r $CDIR/$f $build_dir/
 done
+tar xvf $CDIR/bin/fzf-0.35.1-linux_amd64.tar.gz
+mv $CDIR/fzf $build_dir/bin
+cp $CDIR/bin/tmux.appimage $build_dir/bin/tmux
 
 #portable_url='https://,,,/.tar.gz'
 #tarname=`basename $portable_url`

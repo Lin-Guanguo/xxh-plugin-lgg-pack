@@ -18,11 +18,13 @@ source $CURR_DIR/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $CURR_DIR/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $CURR_DIR/zsh/zsh-vi-mode/zsh-vi-mode.zsh
 
+# bin
+export PATH="$CURR_DIR/bin:$PATH"
+
 # fzf
-export PATH="$CURR_DIR/fzf/bin:$PATH"
 function my_keybind() {
-  source $CURR_DIR/fzf/key-bindings.zsh
-  source $CURR_DIR/fzf/completion.zsh
+  source $CURR_DIR/zsh/fzf-key-bindings.zsh
+  source $CURR_DIR/zsh/fzf-completion.zsh
 }
 zvm_after_init_commands+=(my_keybind)
 
