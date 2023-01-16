@@ -22,8 +22,7 @@ for f in pluginrc.zsh zsh
 do
     cp -r $CDIR/$f $build_dir/
 done
-tar xvf $CDIR/bin/fzf-0.35.1-linux_amd64.tar.gz
-mv $CDIR/fzf $build_dir/bin
+tar xvf $CDIR/bin/fzf-0.35.1-linux_amd64.tar.gz && mv $CDIR/fzf $build_dir/bin
 cp $CDIR/bin/tmux.appimage $build_dir/bin/tmux
 
 #portable_url='https://,,,/.tar.gz'
